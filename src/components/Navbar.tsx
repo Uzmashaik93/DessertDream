@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "/logo.png";
-import { Facebook, FacebookIcon, Link, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
 
   return (
     <nav
-      className={`navbar fixed w-full p-4 transition-all z-50 flex justify-between align-middle duration-300 ${
+      className={`navbar fixed w-full p-8 transition-all z-50 flex justify-between align-middle duration-300 ${
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       } ${isMenuOpen ? "bg-white shadow-md" : "bg:transparent"}`}
     >
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
       <ul
         className={`${
           isMenuOpen ? "block" : "hidden"
-        }  md:flex md:space-x-6 space-y-4 md:space-y-0 text-center md:mt-0 absolute w-full top-22 left-0 bg-white shadow-lg md:relative md:top-5 md:w-auto md:bg-transparent md:shadow-none`}
+        }  md:flex md:space-x-6 space-y-4 md:space-y-0 text-center md:mt-0 absolute w-full top-29 left-0 bg-white shadow-lg md:relative md:top-5 md:w-auto md:bg-transparent md:shadow-none`}
       >
         <li>
           <a href="/" className="text-lg text-orange-300 hover:text-pink-600">
@@ -66,20 +66,13 @@ const Header: React.FC = () => {
         </li>
         <li>
           <a
-            href="#services"
+            href="/menu"
             className="text-lg text-orange-300 hover:text-pink-600"
           >
-            Services
+            Menu
           </a>
         </li>
-        <li>
-          <a
-            href="#portfolio"
-            className="text-lg text-orange-300 hover:text-pink-600"
-          >
-            Portfolio
-          </a>
-        </li>
+
         <li>
           <a
             href="#contact"
