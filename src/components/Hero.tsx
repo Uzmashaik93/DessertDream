@@ -1,4 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
+
+interface HeroProps {
+  height: string;
+  actions?: ReactElement;
+  padding: string;
+  heading: ReactElement;
+}
 
 const images: string[] = [
   "/background1.jpg",
@@ -6,7 +13,12 @@ const images: string[] = [
   "/background5.jpeg",
 ];
 
-const Hero: React.FC = () => {
+const Hero: React.FC<HeroProps> = ({
+  height,
+  actions,
+  padding,
+  heading,
+}: HeroProps) => {
   const [current, setCurrent] = useState(0);
   const [prev, setPrev] = useState(0);
   const [fade, setFade] = useState(false);
@@ -57,7 +69,7 @@ const Hero: React.FC = () => {
 
       <section
         id="home"
-        className="relative text-white text-center py-40 overflow-hidden h-screen"
+        className={`relative text-white text-center ${padding} overflow-hidden ${height}`}
       >
         {/* Previous Image */}
         <div
@@ -78,21 +90,9 @@ const Hero: React.FC = () => {
 
         {/* Content */}
         <div className="relative z-10 max-w-2xl mx-auto animate-fade-in mt-20">
-          <h1 className="text-4xl font-bold mb-4 text-orange-300 text-center opacity-0 animate-slide-in-left">
-            Welcome to Dessert Dream By Namita
-          </h1>
-          <p className="text-lg mb-8 opacity-0 animate-slide-in-right">
-            Freshly baked treats made with the finest ingredients.
-          </p>
-          <div className="flex justify-center mt-6 space-x-4 opacity-0 animate-fade-in-up">
-            <button className="px-6 py-2 bg-orange-300 text-white rounded-full shadow-lg hover:bg-pink-300 transition-transform transform hover:scale-105">
-              Explore Menu
-            </button>
-            <button className="px-6 py-2 bg-white text-orange-300 border border-orange-300 rounded-full shadow-lg hover:bg-pink-100 transition-transform transform hover:scale-105">
-              Contact Us
-            </button>
-          </div>
+          {heading}
         </div>
+        {actions}
       </section>
     </>
   );
