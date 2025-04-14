@@ -31,7 +31,7 @@ const Header: React.FC = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-3">
           <img src={logo} alt="logo" className="w-18" />
-          <a href="#home" className="text-xl font-bold text-orange-300">
+          <a href="/" className="text-xl font-bold text-orange-300">
             Dessert Dream By Namita
           </a>
         </div>

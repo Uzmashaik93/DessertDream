@@ -1,3 +1,5 @@
+import Hero from "../components/Hero";
+
 function Gallery() {
   const imageArray = [
     "/images/image1.jpeg",
@@ -32,31 +34,49 @@ function Gallery() {
     "/images/image30.jpeg",
   ];
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
-        {imageArray.map((image, i) => {
-          return (
-            <div
-              key={i}
-              className="group relative overflow-hidden rounded-xl bg-gradient-to-b from-black/0 to-black/80"
-            >
-              <img
-                src={image}
-                className="w-full aspect-square object-cover transform group-hover:scale-105 transition-transform duration-700"
-              />
+    <div>
+      <div>
+        <div>
+          <Hero
+            height="h-70"
+            padding="py-17"
+            heading={
+              <>
+                <h1 className="text-xl font-bold mb-4 text-orange-300 text-center opacity-0 animate-slide-in-left">
+                  Dessert Dream By Namita - Freshly baked with the finest
+                  ingredients.
+                </h1>
+              </>
+            }
+          />
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
+          {imageArray.map((image, i) => {
+            return (
+              <div
+                key={i}
+                className="group relative overflow-hidden rounded-xl bg-gradient-to-b from-black/0 to-black/80"
+              >
+                <img
+                  src={image}
+                  className="w-full aspect-square object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
 
-              {/* Overlay Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="flex items-center justify-between"></div>
+                {/* Overlay Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <div className="flex items-center justify-between"></div>
+                  </div>
                 </div>
-              </div>
 
-              {/* Hover Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-          );
-        })}
+                {/* Hover Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
