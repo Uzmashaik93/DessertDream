@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "/logo.png";
-import { Menu, X } from "lucide-react";
+import { Facebook, FacebookIcon, Link, Menu, X } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,16 +52,13 @@ const Header: React.FC = () => {
         }  md:flex md:space-x-6 space-y-4 md:space-y-0 text-center md:mt-0 absolute w-full top-22 left-0 bg-white shadow-lg md:relative md:top-5 md:w-auto md:bg-transparent md:shadow-none`}
       >
         <li>
-          <a
-            href="#home"
-            className="text-lg text-orange-300 hover:text-pink-600"
-          >
+          <a href="/" className="text-lg text-orange-300 hover:text-pink-600">
             Home
           </a>
         </li>
         <li>
           <a
-            href="#about"
+            href="/about"
             className="text-lg text-orange-300 hover:text-pink-600"
           >
             About
