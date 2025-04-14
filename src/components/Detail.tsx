@@ -1,8 +1,29 @@
 function Detail() {
   return (
-    <div className="md:flex md:justify-evenly gap-5 p-7 md:p-20 min-w-screen min-h-screen">
+    <div className="md:flex md:justify-evenly gap-10 p-7 md:p-20 min-w-screen min-h-screen">
       <div className="flex-1">
         <img src="/details.png" alt="" />
+      </div>
+      <div className="hidden md:flex flex-col justify-center items-center px-6">
+        {/* Top Line */}
+        <div className="w-[3px] h-28 bg-orange-200 rounded-full shimmer-border" />
+
+        {/* Cupcake Icon */}
+        <div className="my-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="pink"
+            className="animate-bounce drop-shadow-lg"
+          >
+            <path d="M12 2c-1.355 0-2.591.539-3.536 1.464-.872.865-1.373 1.95-1.448 3.051C5.41 7.01 4 8.599 4 10.5c0 1.447.92 2.735 2.292 3.185l.455 5.466A2.003 2.003 0 0 0 8.74 21h6.52a2.003 2.003 0 0 0 1.993-1.849l.455-5.466A3.503 3.503 0 0 0 20 10.5c0-1.901-1.41-3.49-3.016-3.985-.075-1.101-.576-2.186-1.448-3.051A4.985 4.985 0 0 0 12 2z" />
+          </svg>
+        </div>
+
+        {/* Bottom Line */}
+        <div className="w-[3px] h-28 bg-orange-200 rounded-full shimmer-border" />
       </div>
       <div className="flex-1">
         <p className="text-3xl font-semibold mb-7 mt-6 md:mt-0">
