@@ -31,16 +31,16 @@ const ScrollToTop: React.FC = () => {
           onClick={scrollToTop}
         >
           {/* Thin Line */}
-          <div className="relative h-48 w-[2px] bg-pink-200 overflow-hidden">
+          <div className="relative h-48 w-[2px] bg-gray-200 overflow-hidden">
             {/* Progress Bar */}
             <div
-              className="absolute bottom-0 left-0 w-full bg-pink-500 transition-all duration-300"
+              className="absolute bottom-0 left-0 w-full bg-pink-400 transition-all duration-300"
               style={{ height: `${scrollPercent}%` }}
             ></div>
           </div>
 
           {/* Vertical Text */}
-          <span className="mt-9 text-xs text-pink-500 rotate-90 origin-center tracking-widest">
+          <span className="mt-9 text-xs text-black rotate-90 origin-center tracking-widest">
             GO TO TOP
           </span>
         </div>
