@@ -1,6 +1,6 @@
 function Detail() {
   return (
-    <div className="md:flex md:justify-evenly gap-10 p-7 md:p-20 min-w-screen min-h-screen">
+    <div className="md:flex md:justify-evenly gap-10npm i @googlemaps/google-maps-services-js p-7 md:p-20 min-w-screen min-h-screen">
       <div className="flex-1">
         <img src="/details.png" alt="" />
       </div>
@@ -44,7 +44,7 @@ function Detail() {
           Whether it’s a decadent layered cake or a batch of perfectly frosted
           cupcakes, each dessert is made with care and attention to detail.
         </p>
-        <p className="p-7 text-gray-500">
+        <div className="p-7 text-gray-500">
           <span className="font-bold">Order Your Sweet Treats Today!</span>
           <br />
           <p className="text-gray-400">
@@ -53,7 +53,7 @@ function Detail() {
             special occasion. From custom designs to simple everyday
             indulgences, we’re here to bring your dessert dreams to life.
           </p>
-        </p>
+        </div>
         <p className="text-2xl text-right">𝙁𝙊𝙐𝙉𝘿𝙀𝙍 | 𝒩𝒶𝓂𝒾𝓉𝒶</p>
       </div>
     </div>
