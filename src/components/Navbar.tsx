@@ -72,10 +72,18 @@ const Header: React.FC = () => {
             Menu
           </a>
         </li>
+        <li>
+          <a
+            href="/gallery"
+            className="text-lg text-orange-300 hover:text-pink-600"
+          >
+            Gallery
+          </a>
+        </li>
 
         <li>
           <a
-            href="#contact"
+            href="/contact"
             className="text-lg text-orange-300 hover:text-pink-600"
           >
             Contact
