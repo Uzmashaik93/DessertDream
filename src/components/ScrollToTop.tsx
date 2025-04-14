@@ -24,7 +24,7 @@ const ScrollToTop: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed right-4 top-1/3 z-50">
+    <div className="fixed invisible right-4 top-1/3 z-50 lg:visible">
       {visible && (
         <div
           className="cursor-pointer group flex flex-col items-center"
